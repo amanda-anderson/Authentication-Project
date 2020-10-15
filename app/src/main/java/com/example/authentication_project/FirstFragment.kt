@@ -31,44 +31,37 @@ class FirstFragment : Fragment() {
 
         view.findViewById<Button>(R.id.button_segment1).setOnClickListener {
             pinEntry.add("1");
-            if (checkPin()) {
-                findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-            }
+            checkPin();
         }
 
         view.findViewById<Button>(R.id.button_segment2).setOnClickListener {
             pinEntry.add("2");
-            if (checkPin()) {
-                findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-            }
+            checkPin();
         }
 
         view.findViewById<Button>(R.id.button_segment3).setOnClickListener {
             pinEntry.add("3");
-            if (checkPin()) {
-                findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-            }
+            checkPin();
         }
 
         view.findViewById<Button>(R.id.button_segment4).setOnClickListener {
             pinEntry.add("4");
             println(pinEntry.toString());
-            if (checkPin()) {
-                findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-            }
+            checkPin();
         }
     }
 
-    private fun checkPin(): Boolean {
+    private fun checkPin() {
         if (pinCode.size > pinEntry.size) {
-            return false;
+            return;
         }
 
         for((i, s) in pinCode.withIndex()) {
             if (pinEntry.elementAt(i) != s) {
-                return false;
+                return;
             }
         }
-        return true;
+
+        findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
     }
 }
