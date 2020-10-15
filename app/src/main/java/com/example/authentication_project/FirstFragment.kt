@@ -55,13 +55,11 @@ class FirstFragment : Fragment() {
         if (pinCode.size > pinEntry.size) {
             return;
         }
-
         for((i, s) in pinCode.withIndex()) {
             if (pinEntry.elementAt(i) != s) {
                 return;
             }
         }
-
         findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
     }
 }
