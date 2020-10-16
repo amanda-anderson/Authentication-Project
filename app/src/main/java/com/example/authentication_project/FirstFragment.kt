@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextClock
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 
 /**
@@ -16,6 +18,7 @@ class FirstFragment : Fragment() {
     var pinCode = mutableListOf("2", "2", "3", "4");
     var pinEntry = mutableListOf("0");
 
+
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
@@ -23,6 +26,7 @@ class FirstFragment : Fragment() {
         // Reset pin
         pinEntry.remove("0");
         // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_first, container, false)
     }
 

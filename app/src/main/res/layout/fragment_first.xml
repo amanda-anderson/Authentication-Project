@@ -6,12 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="505dp"
+        android:layout_height="879dp"
+        android:layout_marginEnd="213dp"
+        android:contentDescription="Background"
+        android:src="@drawable/lockscreenbackground"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button_segment2"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.344" />
+
     <Button
         android:id="@+id/button_segment4"
         android:layout_width="210dp"
         android:layout_height="354dp"
-        android:background="#3283A8"
-        android:text="@string/next"
+        android:background="#003283A8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintHorizontal_bias="1.0"
@@ -23,8 +37,7 @@
         android:id="@+id/button_segment3"
         android:layout_width="193dp"
         android:layout_height="359dp"
-        android:background="#46B2E3"
-        android:text="@string/next"
+        android:background="#0046B2E3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
@@ -35,8 +48,7 @@
         android:id="@+id/button_segment2"
         android:layout_width="192dp"
         android:layout_height="333dp"
-        android:background="#56A4C8"
-        android:text="@string/next"
+        android:background="#0056A4C8"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -48,8 +60,7 @@
         android:id="@+id/button_segment1"
         android:layout_width="205dp"
         android:layout_height="334dp"
-        android:background="#76C9EF"
-        android:text="@string/next"
+        android:background="#0076C9EF"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintHorizontal_bias="0.5"
@@ -69,4 +80,32 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
+
+    <TextClock
+        android:id="@+id/clockView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:format12Hour="hh:mm"
+        android:format24Hour="hh:mm"
+        android:paddingTop="100sp"
+        android:textColor="#FFFFFF"
+        android:textSize="100sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:paddingTop="220sp"
+        android:text="Friday, October 9th"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
