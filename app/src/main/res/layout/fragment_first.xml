@@ -80,7 +80,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
-    <TextClock
+   <TextClock
         android:id="@+id/clockView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -109,9 +109,10 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="21dp"
-        android:layout_height="44dp"
-        android:paddingTop="20sp"
+        android:layout_width="65dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="50dp"
+        android:paddingTop="0dp"
         android:src="@drawable/whitelock2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

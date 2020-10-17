@@ -20,6 +20,33 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.344" />
 
+  <TextClock
+     android:id="@+id/clockView"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:fontFamily="sans-serif-thin"
+     android:format12Hour="hh:mm"
+     android:format24Hour="hh:mm"
+     android:paddingTop="100sp"
+     android:textColor="#FFFFFF"
+     android:textSize="70sp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_second"
+        android:layout_width="125dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="16dp"
+        android:background="#80595959"
+        android:text="Lock Screen"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TableLayout
         android:layout_width="414dp"
         android:layout_height="444dp"
@@ -30,37 +57,38 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             android:baselineAligned="false"
             android:gravity="center">
 
-            <Button
-                android:id="@+id/button_second"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lock" />
-
             <ImageButton
                 android:id="@+id/imageButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
                 android:background="#00FFFFFF"
-                android:src="@mipmap/calendar_foreground" />
+                android:src="@drawable/ic_snapchat" />
+
+            <ImageButton
+                android:id="@+id/imageButton13"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
+                android:background="#00FFFFFF"
+                android:src="@drawable/ic_chrome2" />
 
             <ImageButton
                 android:id="@+id/imageButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
                 android:background="#00FFFFFF"
-                android:src="@mipmap/calendar_foreground" />
+                android:src="@drawable/ic_gmail2" />
 
             <ImageButton
-                android:id="@+id/imageButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/settingsButton"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
                 android:background="#00FFFFFF"
-                android:src="@mipmap/calendar_foreground" />
+                android:src="@drawable/ic_setting2" />
 
         </TableRow>
 
@@ -69,29 +97,33 @@
             android:layout_height="match_parent"
             android:gravity="center">
 
-            <Button
-                android:id="@+id/button_second5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lock" />
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
+                android:background="#00FFFFFF"
+                android:src="@drawable/ic_instagram2" />
 
-            <Button
-                android:id="@+id/button_second6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lock" />
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
+                android:background="#00FFFFFF"
+                android:src="@drawable/ic_phone_call" />
 
-            <Button
-                android:id="@+id/button_second7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lock" />
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
+                android:background="#00FFFFFF"
+                android:src="@drawable/ic_playstore" />
 
-            <Button
-                android:id="@+id/button_second8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lock" />
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
+                android:background="#00FFFFFF"
+                android:src="@drawable/ic_weather" />
         </TableRow>
 
         <TableRow
@@ -99,31 +131,48 @@
             android:layout_height="match_parent"
             android:gravity="center">
 
-            <Button
-                android:id="@+id/button_second9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lock" />
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
+                android:background="#00FFFFFF"
+                android:src="@drawable/ic_gallery3" />
 
-            <Button
-                android:id="@+id/button_second10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lock" />
+            <ImageButton
+                android:id="@+id/imageButton10"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
+                android:background="#00FFFFFF"
+                android:src="@drawable/ic_spotify" />
 
-            <Button
-                android:id="@+id/button_second11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lock" />
+            <ImageButton
+                android:id="@+id/imageButton11"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
+                android:background="#00FFFFFF"
+                android:src="@drawable/ic_tik_tok" />
 
-            <Button
-                android:id="@+id/button_second12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lock" />
+            <ImageButton
+                android:id="@+id/imageButton12"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
+                android:background="#00FFFFFF"
+                android:src="@drawable/ic_reddit" />
         </TableRow>
 
     </TableLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="190sp"
+        android:text="6° Celsius, Rain"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
