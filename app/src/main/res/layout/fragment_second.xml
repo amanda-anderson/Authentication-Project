@@ -6,21 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".SecondFragment">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="505dp"
-        android:layout_height="879dp"
-        android:layout_marginEnd="213dp"
-        android:src="@drawable/lockscreenbackground"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.344" />
-
-  <TextClock
+    <!--<TextClock
      android:id="@+id/clockView"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
@@ -32,7 +18,21 @@
      android:textSize="70sp"
      app:layout_constraintEnd_toEndOf="parent"
      app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toTopOf="parent" />
+     app:layout_constraintTop_toTopOf="parent" /> -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="595dp"
+        android:layout_height="1080dp"
+        android:layout_marginStart="-5dp"
+        android:src="@drawable/lockscreenbackground"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.352" />
 
     <Button
         android:id="@+id/button_second"
