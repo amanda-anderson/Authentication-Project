@@ -21,8 +21,8 @@ import java.io.FileNotFoundException
 class FirstFragment : Fragment() {
     private lateinit var mp: MediaPlayer
 
-    var pinCode = "";
-    var pinEntry = "";
+    private var pinCode = ""
+    private var pinEntry = ""
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -30,7 +30,7 @@ class FirstFragment : Fragment() {
     ): View? {
 
         // Check for stored pin
-        var filename = "storage.txt"
+        val filename = "storage.txt"
         val storageDirectory = File("/sdcard/Storage/")
         storageDirectory.mkdirs()
         val filePath = File(storageDirectory, filename)
@@ -44,11 +44,8 @@ class FirstFragment : Fragment() {
         }
 
         // Otherwise set pinCode to default
-        if (pinCode.length == 4) {
-            pinCode = pinCode;
-        }
-        else {
-            pinCode = "2234";
+        if (pinCode.length != 4) {
+            pinCode = "2234"
             try {
                 filePath.bufferedWriter().use { out ->
                     out.write("2234")
@@ -68,27 +65,27 @@ class FirstFragment : Fragment() {
 
         view.findViewById<Button>(R.id.button_segment1).setOnClickListener {
             pinEntry += "1"
-            checkPin();
-            vibratePhone();
+            checkPin()
+            vibratePhone()
         }
 
         view.findViewById<Button>(R.id.button_segment2).setOnClickListener {
             pinEntry += "2"
-            checkPin();
-            vibratePhone();
+            checkPin()
+            vibratePhone()
         }
 
         view.findViewById<Button>(R.id.button_segment3).setOnClickListener {
             pinEntry += "3"
-            checkPin();
-            vibratePhone();
+            checkPin()
+            vibratePhone()
         }
 
         view.findViewById<Button>(R.id.button_segment4).setOnClickListener {
             pinEntry += "4"
-            println(pinEntry.toString());
-            checkPin();
-            vibratePhone();
+            println(pinEntry)
+            checkPin()
+            vibratePhone()
         }
     }
 
@@ -96,13 +93,13 @@ class FirstFragment : Fragment() {
         if (pinCode.length == pinEntry.length && (pinCode!=pinEntry)) {
             mp = MediaPlayer.create(context, R.raw.pinincorrect)
             mp.start()
-            pinEntry = "";
+            pinEntry = ""
         }
         if (pinCode.length > pinEntry.length) {
-            return;
+            return
         }
-        if (!pinCode.equals(pinEntry)) {
-            return;
+        if (pinCode != pinEntry) {
+            return
         }
 
         findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)

@@ -26,7 +26,7 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var mp = MediaPlayer.create(context, R.raw.settings)
+        val mp = MediaPlayer.create(context, R.raw.settings)
         mp.start()
 
         view.findViewById<ImageButton>(R.id.returnHome).setOnClickListener {
@@ -35,7 +35,6 @@ class SettingsFragment : Fragment() {
 
         view.findViewById<Button>(R.id.buttonSetPin).setOnClickListener {
             findNavController().navigate(R.id.action_SettingsFragment_to_NewPasswordFragment)
-
         }
     }
 }
