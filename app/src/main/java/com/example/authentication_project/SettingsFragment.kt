@@ -1,5 +1,6 @@
 package com.example.authentication_project
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -24,6 +25,9 @@ class SettingsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        var mp = MediaPlayer.create(context, R.raw.settings)
+        mp.start()
 
         view.findViewById<ImageButton>(R.id.returnHome).setOnClickListener {
             findNavController().navigate(R.id.action_SettingsFragment_to_SecondFragment)

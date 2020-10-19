@@ -1,15 +1,19 @@
 package com.example.authentication_project
 
+import android.content.Context
 import android.media.MediaPlayer
+import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextClock
-import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import java.io.File
+import java.io.FileNotFoundException
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -17,18 +21,45 @@ import androidx.navigation.fragment.findNavController
 class FirstFragment : Fragment() {
     private lateinit var mp: MediaPlayer
 
-    var pinCode = mutableListOf("2", "2", "3", "4");
-    var pinEntry = mutableListOf("0");
-
+    var pinCode = "";
+    var pinEntry = "";
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        // Reset pin
-        pinEntry.remove("0");
-        // Inflate the layout for this fragment
 
+        // Check for stored pin
+        var filename = "storage.txt"
+        val storageDirectory = File("/sdcard/Storage/")
+        storageDirectory.mkdirs()
+        val filePath = File(storageDirectory, filename)
+        try {
+            pinCode = filePath.bufferedReader().use { out ->
+                out.readLine()
+            }
+
+        } catch (e: FileNotFoundException) {
+            e.printStackTrace()
+        }
+
+        // Otherwise set pinCode to default
+        if (pinCode.length == 4) {
+            pinCode = pinCode;
+        }
+        else {
+            pinCode = "2234";
+            try {
+                filePath.bufferedWriter().use { out ->
+                    out.write("2234")
+                }
+
+            } catch (e: FileNotFoundException) {
+                e.printStackTrace()
+            }
+        }
+
+        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_first, container, false)
     }
 
@@ -36,45 +67,53 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.button_segment1).setOnClickListener {
-            pinEntry.add("1");
+            pinEntry += "1"
             checkPin();
-            buttonPressedSound()
+            vibratePhone();
         }
 
         view.findViewById<Button>(R.id.button_segment2).setOnClickListener {
-            pinEntry.add("2");
+            pinEntry += "2"
             checkPin();
-            buttonPressedSound()
+            vibratePhone();
         }
 
         view.findViewById<Button>(R.id.button_segment3).setOnClickListener {
-            pinEntry.add("3");
+            pinEntry += "3"
             checkPin();
-            buttonPressedSound()
+            vibratePhone();
         }
 
         view.findViewById<Button>(R.id.button_segment4).setOnClickListener {
-            pinEntry.add("4");
+            pinEntry += "4"
             println(pinEntry.toString());
             checkPin();
-            buttonPressedSound()
+            vibratePhone();
         }
     }
 
     private fun checkPin() {
-        if (pinCode.size > pinEntry.size) {
+        if (pinCode.length == pinEntry.length && (pinCode!=pinEntry)) {
+            mp = MediaPlayer.create(context, R.raw.pinincorrect)
+            mp.start()
+            pinEntry = "";
+        }
+        if (pinCode.length > pinEntry.length) {
             return;
         }
-        for((i, s) in pinCode.withIndex()) {
-            if (pinEntry.elementAt(i) != s) {
-                return;
-            }
+        if (!pinCode.equals(pinEntry)) {
+            return;
         }
+
         findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
     }
 
-    private fun buttonPressedSound() {
-        mp = MediaPlayer.create(context, R.raw.speech)
-        mp.start()
+    fun Fragment.vibratePhone() {
+        val vibrator = context?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        if (Build.VERSION.SDK_INT >= 26) {
+            vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE))
+        } else {
+            vibrator.vibrate(100)
+        }
     }
 }

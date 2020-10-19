@@ -79,7 +79,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
-   <!-- <TextClock
+    <TextClock
         android:id="@+id/clockView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
         android:textSize="100sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" /> -->
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"

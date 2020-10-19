@@ -38,7 +38,7 @@ class SecondFragment : Fragment() {
     }
 
     private fun viewingHomeScreen() {
-        mp = MediaPlayer.create(context, R.raw.homescreen)
+        mp = MediaPlayer.create(context, R.raw.home)
         mp.start()
     }
 }

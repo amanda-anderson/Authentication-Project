@@ -23,6 +23,11 @@
         android:name="com.example.authentication_project.NewPasswordFragment"
         android:label="new_password_label"
         tools:layout="@layout/new_password">
+        <action
+            android:id="@+id/action_NewPasswordFragment_to_SettingsFragment"
+            app:destination="@id/SettingsFragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
     </fragment>
 
     <fragment

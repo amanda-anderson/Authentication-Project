@@ -6,20 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".SecondFragment">
 
-    <!--<TextClock
-     android:id="@+id/clockView"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:fontFamily="sans-serif-thin"
-     android:format12Hour="hh:mm"
-     android:format24Hour="hh:mm"
-     android:paddingTop="100sp"
-     android:textColor="#FFFFFF"
-     android:textSize="70sp"
-     app:layout_constraintEnd_toEndOf="parent"
-     app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toTopOf="parent" /> -->
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="595dp"
@@ -44,6 +30,20 @@
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextClock
+        android:id="@+id/clockView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:format12Hour="hh:mm"
+        android:format24Hour="hh:mm"
+        android:paddingTop="100sp"
+        android:textColor="#FFFFFF"
+        android:textSize="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
