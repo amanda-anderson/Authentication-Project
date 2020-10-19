@@ -31,6 +31,7 @@ class SecondFragment : Fragment() {
 
         view.findViewById<Button>(R.id.button_second).setOnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+            lockScreen()
         }
         view.findViewById<ImageButton>(R.id.settingsButton).setOnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_SettingsFragment)
@@ -39,6 +40,11 @@ class SecondFragment : Fragment() {
 
     private fun viewingHomeScreen() {
         mp = MediaPlayer.create(context, R.raw.home)
+        mp.start()
+    }
+
+    private fun lockScreen() {
+        mp = MediaPlayer.create(context, R.raw.lockscreen)
         mp.start()
     }
 }

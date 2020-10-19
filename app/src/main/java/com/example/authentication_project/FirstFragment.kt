@@ -108,7 +108,7 @@ class FirstFragment : Fragment() {
         findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
     }
 
-    fun Fragment.vibratePhone() {
+    private fun Fragment.vibratePhone() {
         val vibrator = context?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         if (Build.VERSION.SDK_INT >= 26) {
             vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE))

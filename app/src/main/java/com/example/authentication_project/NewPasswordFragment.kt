@@ -145,11 +145,13 @@ class NewPasswordFragment : Fragment() {
             }
         }
 
-        if (pinCode.length > pinEntry.length) {
-            return;
+        if (pinCode.length == pinEntry.length && (pinCode != pinEntry)) {
+            mp = MediaPlayer.create(context, R.raw.pinincorrect)
+            mp.start()
+            pinEntry = ""
         }
 
-        if (pinEntry.equals(pinCode)) {
+        if (pinEntry == pinCode) {
             view?.findViewById<TextView>(R.id.textView4)?.setText("Enter New 4 Digit Pin");
             enterNew = true;
             mp = MediaPlayer.create(context, R.raw.enternewpin)
@@ -157,7 +159,7 @@ class NewPasswordFragment : Fragment() {
         }
     }
 
-    fun Fragment.vibratePhone() {
+    private fun Fragment.vibratePhone() {
         val vibrator = context?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         if (Build.VERSION.SDK_INT >= 26) {
             vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE))
