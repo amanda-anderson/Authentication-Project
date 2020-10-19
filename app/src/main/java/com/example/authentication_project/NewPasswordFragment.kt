@@ -2,10 +2,7 @@ package com.example.authentication_project
 
 import android.content.Context
 import android.media.MediaPlayer
-import android.os.Build
-import android.os.Bundle
-import android.os.VibrationEffect
-import android.os.Vibrator
+import android.os.*
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -125,6 +122,11 @@ class NewPasswordFragment : Fragment() {
                 index++
             }
 
+            // Takes the user back to the SettingsFragment after a delay of 2.5 seconds
+            Handler(Looper.getMainLooper()).postDelayed({
+                findNavController().navigate(R.id.action_NewPasswordFragment_to_SettingsFragment)
+            }, 2500)
+
             // Write new pin to storage
             val filename = "storage.txt"
             val storageDirectory = File("/sdcard/Storage/")
@@ -137,7 +139,6 @@ class NewPasswordFragment : Fragment() {
             } catch (e: FileNotFoundException) {
                 e.printStackTrace()
             }
-
         }
 
         if (pinCode.length == pinEntry.length && (pinCode != pinEntry)) {
