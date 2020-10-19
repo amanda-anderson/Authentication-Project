@@ -6,20 +6,16 @@ import android.os.Build
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import java.io.File
-import java.io.FileInputStream
 import java.io.FileNotFoundException
-import java.io.FileOutputStream
 
 /**
  * A simple [Fragment] subclass as the new password destination in the navigation.
@@ -27,18 +23,17 @@ import java.io.FileOutputStream
 class NewPasswordFragment : Fragment() {
 
     private lateinit var mp: MediaPlayer
-    var pinCode = "";
-    var pinEntry = "";
-    var newPinCode = "";
-    var enterNew = false;
-    var temppp = "";
+    private var pinCode = ""
+    private var pinEntry = ""
+    private var newPinCode = ""
+    private var enterNew = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        var filename = "storage.txt"
+        val filename = "storage.txt"
         val storageDirectory = File("/sdcard/Storage/")
         val inputFile = File(storageDirectory, filename)
         try {
@@ -65,53 +60,52 @@ class NewPasswordFragment : Fragment() {
         }
 
         view.findViewById<Button>(R.id.button_segment1).setOnClickListener {
-            pinEntry += "1";
+            pinEntry += "1"
             if (enterNew) {
-                newPinCode += "1";
+                newPinCode += "1"
             }
-            vibratePhone();
-            checkPin();
+            vibratePhone()
+            checkPin()
         }
 
         view.findViewById<Button>(R.id.button_segment2).setOnClickListener {
-            pinEntry += "2";
+            pinEntry += "2"
             if (enterNew) {
-                newPinCode += "2";
+                newPinCode += "2"
             }
-            vibratePhone();
-            checkPin();
+            vibratePhone()
+            checkPin()
         }
 
         view.findViewById<Button>(R.id.button_segment3).setOnClickListener {
-            pinEntry += "3";
+            pinEntry += "3"
             if (enterNew) {
-                newPinCode += "3";
+                newPinCode += "3"
             }
-            vibratePhone();
-            checkPin();
+            vibratePhone()
+            checkPin()
         }
 
         view.findViewById<Button>(R.id.button_segment4).setOnClickListener {
-            pinEntry += "4";
+            pinEntry += "4"
             if (enterNew) {
-                newPinCode += "4";
+                newPinCode += "4"
             }
-            vibratePhone();
-            checkPin();
+            vibratePhone()
+            checkPin()
         }
     }
 
     private fun checkPin() {
-
         if (newPinCode.length == 4) {
-            view?.findViewById<TextView>(R.id.textView4)?.setText("Pin Updated: " + newPinCode);
+            view?.findViewById<TextView>(R.id.textView4)?.setText("Pin Updated: " + newPinCode)
 
             mp = MediaPlayer.create(context, R.raw.newpinset)
             mp.start()
             Thread.sleep(1000)
 
             // Replay new pin to user
-            var index = 0;
+            var index = 0
             while (index < newPinCode.length) {
 
                 when(newPinCode[index]) {
@@ -128,11 +122,11 @@ class NewPasswordFragment : Fragment() {
                             mp.start()
                             Thread.sleep(650) }
                 }
-                index++;
+                index++
             }
 
             // Write new pin to storage
-            var filename = "storage.txt"
+            val filename = "storage.txt"
             val storageDirectory = File("/sdcard/Storage/")
             val filePath = File(storageDirectory, filename)
             try {
@@ -153,7 +147,7 @@ class NewPasswordFragment : Fragment() {
 
         if (pinEntry == pinCode) {
             view?.findViewById<TextView>(R.id.textView4)?.setText("Enter New 4 Digit Pin");
-            enterNew = true;
+            enterNew = true
             mp = MediaPlayer.create(context, R.raw.enternewpin)
             mp.start()
         }
