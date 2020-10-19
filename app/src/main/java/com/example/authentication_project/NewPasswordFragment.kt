@@ -137,6 +137,7 @@ class NewPasswordFragment : Fragment() {
             } catch (e: FileNotFoundException) {
                 e.printStackTrace()
             }
+
         }
 
         if (pinCode.length == pinEntry.length && (pinCode != pinEntry)) {
