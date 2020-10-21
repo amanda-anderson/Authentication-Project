@@ -3,7 +3,7 @@ Mobile authentication project for TIA110.
 
 > Authors: Charlie Lam (charlie.lam97@gmail.com) & Amanda Anderson (anderson.amanda403@gmail.com)
 >
-> Date of publication: 2020-10-20
+> Date of publication: 2020-10-23
 
 ## Installation
 
