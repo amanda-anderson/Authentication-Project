@@ -7,9 +7,9 @@ Mobile authentication project for TIA110.
 
 ## Installation
 
-Download the Github project as a zip file, clone, or select "Open in Github Desktop". 
+Download the Github project as a zip file.
 
-Open the project in Android Studio.
+Unzip the file to any locaiton, and open the project in Android Studio.
 If a VCS error appears, you may ignore this.
 
 ## Usage
