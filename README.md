@@ -32,10 +32,10 @@ To Run on Device:
 * Move to the section "App Instructions for Both Devices" for further instruction.
 
 App Instructions for Both Devices:
-* The app starts with a locked screen. The lock screen is divided into 4 equal invisble quadrants, with each quadrant acting as a seperate input button. A specific sequence of quadrant clicks is used to log in.
-* The initial default password is: Top Right, Top Right, Bottom Right, Bottom Left or "2,2,4,3" as a button number representation. Each button is fairly large, so the buttons can be clicked in a fairly general location.
+* The app starts with a locked screen. The entire locked screen is divided into 4 equal invisble quadrants, with each quadrant acting as a seperate input button. A specific sequence of quadrant clicks is used to log in.
+* The initial default password is: Top Right, Top Right, Bottom Right, Bottom Left or "2,2,4,3" as a button number representation. Each button is fairly large, so the buttons can be clicked in a fairly general manner.
 * If the password is incorrect, the audio feedback will tell you, and you will be prompted to enter the pin again.
-* Upon successful entry, you now view the home screen. The only clickable buttons here are "Lock Screen" to return to the locked mode, as well as the upper left "Settings" gear button.
+* Upon successful entry, you now view the home screen. The only clickable buttons here are "Lock Screen" to return to the locked mode, as well as the upper right "Settings" gear button.
 * Click the "Settings" button, and you will be taken to a Settings view. In the list, find and select the Security (Set screen lock) option.
 * Enter the password you used to unlock the phone (default was Top Right, Top Right, Bottom Right, Bottom Left).
 * Upon successful entry, you will be prompted to enter a new 4-digit pin. Enter this password now and be sure you remember it. The audio feedback will speak your new pin back to you.
