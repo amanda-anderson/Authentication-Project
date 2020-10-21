@@ -6,15 +6,14 @@ Mobile authentication project for TIA110.
 > Date of publication: 2020-10-20
 
 ## Installation
-```bash
+
 Download the Github project as a zip file, clone, or select "Open in Github Desktop". 
 
 Open the project in Android Studio.
 An VCS error may appear. You may ignore this.
-```
 
 ## Usage
-```bash
+
 To Run on Emulator:
 - If an emulator is not already set up, use the Android Studio AVD manager and Tools and set up a new device. The API level for the device should be KitKat (API 19) or newer.
 - Once the device is ready, select Run 'app'.
@@ -39,7 +38,7 @@ App Instructions For Both Devices:
 - Enter the password you used to unlock the phone (default was top right, top right, bottom right, bottom left).
 - Upon successful entry, you will be prompted to enter a new password. Enter this password now and be sure you remember it. 
 - Click the back arrow button to return to Settings, and again to return to Home. Lock the screen using the "Lock Screen" button, and try the new password you have just set.
-```
+
 
 ## Structure
 //TODO
