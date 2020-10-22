@@ -26,7 +26,7 @@ To Run on Emulator:
 To Run on Device:
 1. Make sure your Android device is in Developer Mode and USB Debugging is turned on.
 2. Connect the device via USB to your computer. You should see your phone now as an option in the device selecter next to the "Run" icon in Android Studio.
-3. elect your device and click Run 'app'
+3. Select your device and click Run 'app'.
 4. Make sure your Media audio is turned up, so the audio feedback can be heard.
 5. When running the app for the first time, storage permissions will be requested. Grant permissions when prompted.
 6. Move to the section "App Instructions for Both Devices" for further instruction.
