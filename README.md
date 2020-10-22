@@ -32,14 +32,14 @@ To Run on Device:
 6. Move to the section "App Instructions for Both Devices" for further instruction.
 
 App Instructions for Both Devices:
-7. The app starts with a locked screen. The entire locked screen is divided into 4 equal invisble quadrants, with each quadrant acting as a seperate input button. A specific sequence of quadrant clicks is used to log in.
-8. The initial default password is: Top Right, Top Right, Bottom Right, Bottom Left or "2,2,4,3" as a button number representation. Each button is fairly large, so the buttons can be clicked in a fairly general location.
-9. If the password is incorrect, the audio feedback will tell you, and you will be prompted to enter the pin again.
-10. Upon successful entry, you now view the home screen. The only clickable buttons here are "Lock Screen" to return to the locked mode, as well as the upper right "Settings" gear button.
-11. Click the "Settings" button, and you will be taken to a Settings view. In the list, find and select the Security (Set screen lock) option.
-12. Enter the password you used to unlock the phone (default was Top Right, Top Right, Bottom Right, Bottom Left).
-13. Upon successful entry, you will be prompted to enter a new 4-digit pin. Enter this password now and be sure you remember it. The audio feedback will speak your new pin back to you.
-14. Click the back arrow button to return to Settings, and again to return to Home. Lock the screen using the "Lock Screen" button, and try the new password you have just set.
+1. The app starts with a locked screen. The entire locked screen is divided into 4 equal invisble quadrants, with each quadrant acting as a seperate input button. A specific sequence of quadrant clicks is used to log in.
+2. The initial default password is: Top Right, Top Right, Bottom Right, Bottom Left or "2,2,4,3" as a button number representation. Each button is fairly large, so the buttons can be clicked in a fairly general location.
+3. If the password is incorrect, the audio feedback will tell you, and you will be prompted to enter the pin again.
+4. Upon successful entry, you now view the home screen. The only clickable buttons here are "Lock Screen" to return to the locked mode, as well as the upper right "Settings" gear button.
+5. Click the "Settings" button, and you will be taken to a Settings view. In the list, find and select the Security (Set screen lock) option.
+6. Enter the password you used to unlock the phone (default was Top Right, Top Right, Bottom Right, Bottom Left).
+7. Upon successful entry, you will be prompted to enter a new 4-digit pin. Enter this password now and be sure you remember it. The audio feedback will speak your new pin back to you.
+8. Click the back arrow button to return to Settings, and again to return to Home. Lock the screen using the "Lock Screen" button, and try the new password you have just set.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
